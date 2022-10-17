@@ -1,0 +1,23 @@
+<h1>În coșul dumneavoastră de cumpărături, se află:</h1>
+<table>
+    <tr>
+        <th>Componenta</th>
+        <th>Producator</th>
+        <th>Model</th>
+        <th>Cantitate</th>
+        <th>Pret</th>
+    </tr>
+    <% for(var j=0; j < cos.length; j++) { %>
+        <%  for(var i=0; i < vector.length; i++) { %>
+            <% if(vector[i].id==cos[j]) { %>
+                <tr>
+                    <td> <%= vector[i]['componenta'] %> </td>
+                    <td> <%= vector[i]['producator'] %> </td>
+                    <td> <%= vector[i]['model'] %> </td>
+                    <td> <%= vector[i]['cantitate'] %> </td>
+                    <td> <%= vector[i]['pret'] %> </td>
+                </tr>
+            <% } %>
+        <% } %>
+    <% } %>
+</table>

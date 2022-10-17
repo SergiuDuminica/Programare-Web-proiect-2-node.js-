@@ -1,0 +1,16 @@
+[
+    {
+        "utilizator": "test",
+        "parola": "test",
+        "nume": "Popescu",
+        "prenume": "Gabriel",
+        "rol": "user"
+    },
+    {
+        "utilizator": "sergiu",
+        "parola": "sergiu",
+        "nume": "Duminica",
+        "prenume": "Sergiu",
+        "rol": "admin"
+    }
+]

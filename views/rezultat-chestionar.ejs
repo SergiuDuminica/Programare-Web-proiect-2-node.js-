@@ -1,0 +1,12 @@
+<h2>
+    Logat ca, <%= username %>
+</h2>
+<form action="/logout" method="POST">
+    <button type="submit">Log out</button>
+</form>
+<br>
+<p>Numărul de întrebări la care ați răspuns corect: <%= numar_raspunsuri_corecte %></p>
+<br>
+<form action="/" method="GET">
+    <button type="submit">Înapoi la pagina principală</button>
+</form>

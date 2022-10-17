@@ -1,0 +1,49 @@
+[
+    {
+        "intrebare": "La momentul actual, dețineți un calculator?",
+        "variante": [
+            "Da",
+            "Nu"
+        ],
+        "corect": 0
+    },
+    {
+        "intrebare": "Câte componente are un calculator?",
+        "variante": [
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "corect": 2
+    },
+    {
+        "intrebare": "Care dintre următoarele medii de stocare are viteza de accesare mult mai mare?",
+        "variante": [
+            "HDD",
+            "SSD"
+        ],
+        "corect": 1
+    },
+    {
+        "intrebare": "Care este temperatura normală a unui procesor?",
+        "variante": [
+            "35°C",
+            "45°C",
+            "50°C",
+            "65°C",
+            "95°C"
+        ],
+        "corect": 3
+    },
+    {
+        "intrebare": "Ce reprezintă acronimul PC?",
+        "variante": [
+            "Personal Computer",
+            "Professional Computer",
+            "Project Computer"
+        ],
+        "corect": 0
+    }
+]

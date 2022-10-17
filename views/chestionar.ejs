@@ -1,0 +1,26 @@
+<h2>
+    Logat ca, <%= username %>
+</h2>
+<form action="/logout" method="POST">
+    <button type="submit">Log out</button>
+</form>
+<br>
+<form action="/rezultat-chestionar"  method="POST">
+    <% intrebari.forEach((valoare) => { %>
+        <p>
+            <%= valoare['intrebare'] %>
+        </p>
+        <% valoare['variante'].forEach((varianta) => { %>
+            <input type="radio" name= <%= varianta %>>
+            <label for=<% varianta %>> <%= varianta %> </label>
+            <br>
+        <% }); %>
+    <% }); %>
+    <br>
+    <br>
+    <button type="submit">Trimite răspuns</button>
+</form>
+<br>
+<form action="/" method="GET">
+    <button type="submit">Înapoi la pagina principală</button>
+</form>

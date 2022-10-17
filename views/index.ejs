@@ -1,0 +1,76 @@
+<% if(username != undefined) { %>
+    <h1>
+        Bine ați venit, <%= username %>!
+        <br>
+        Aveți rolul: <%= rol %>
+    </h1>
+    <form action="/logout" method="POST">
+        <button type="submit">Log out</button>
+    </form>
+    <% if(rol == 'admin') { %> 
+    <form action="/admin" method="GET">
+        <button type="submit">Admin</button>
+    </form>
+    <% } %>
+    <br>
+    <form action="/chestionar" method="GET">
+        <button type="submit">Către chestionar</button>
+    </form>
+    <br>
+    <form action="/creare-bd" method="GET">
+        <button type="submit">Creare BD</button>
+    </form>
+    <br>
+    <form action="/inserare-bd" method="GET">
+        <button type="submit">Încărcare BD</button>
+    <br><br>
+    <% if(produse !=undefined) { %>
+        <table>
+            <tr>
+                <th>Componenta</th>
+                <th>Producator</th>
+                <th>Model</th>
+                <th>Cantitate</th>
+                <th>Pret</th>
+            </tr>
+            <% for(var i=0; i < produse.length; i++) { %>
+                <tr>
+                    <td> <%= produse[i]['componenta'] %> </td>
+                    <td> <%= produse[i]['producator'] %> </td>
+                    <td> <%= produse[i]['model'] %> </td>
+                    <td> <%= produse[i]['cantitate'] %> </td>
+                    <td> <%= produse[i]['pret'] %> </td>
+                    <td>
+                        <form action="/adauga-cos" method="POST">
+                            <input type="submit" value="Adaugă în coș"></input>
+                            <input type="hidden" name="id" value= <%= produse[i]['id'] %> ></input>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+    <% } %>
+    <br>
+    <form action="/vizualizare-cos" method="POST">
+        <button type="submit">Vezi cosul tau</button>
+<% } %>
+
+<% if(username == undefined) { %>
+    <h1>
+        Bine ați venit!
+    </h1>
+    <h2>
+        Vă rugăm să vă autentificați pentru a continua navigarea pe acest site.
+    </h2>
+    <form action="/autentificare" method="GET">
+        <button type="submit">Autentificare</button>
+    </form>
+    <br>
+    <form action="/creare-bd" method="GET">
+        <button type="submit">Creare BD</button>
+    </form>
+    <br>
+    <form action="/inserare-bd" method="GET">
+        <button type="submit">Încărcare BD</button>
+    </form>
+<% } %>

@@ -1,0 +1,23 @@
+<h1>
+    Autentificare
+</h1>
+<br><br><br>
+<form action="/verificare-autentificare" method="POST">
+    Nume: <input type="text" name="nume">
+    <br><br>
+    Prenume: <input type="text" name="prenume">
+    <br><br>
+    Utilizator: <input type="text" name="username">
+    <br><br>
+    Parola: <input type="password" name="password">
+    <br><br>
+    <button type="submit">Autentificare</button>
+</form>
+<br>
+<form action="/" method="GET">
+    <button type="submit">Înapoi la pagina principală</button>
+</form>
+<br>
+<% if (mesaj_eroare != null) { %>
+    <p style="color:red"> <%= mesaj_eroare %> </p>
+<% } %>
